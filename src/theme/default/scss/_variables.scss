@@ -1,0 +1,80 @@
+// Options
+$enable-rounded: true !default;
+
+// Temporary setting
+//
+
+$line-height: ( 20 / 14 ) !default;
+
+
+
+
+
+
+// Spacing
+$spacer: 1em !default;
+$spacer-x: $spacer !default;
+$spacer-y: $spacer !default;
+
+$spacing: (
+    0: 0,
+    1: 4px,
+    2: 8px,
+    3: 12px,
+    4: 16px,
+    5: 20px,
+    6: 24px,
+    7: 28px,
+    8: 32px,
+    9: 36px,
+    10: 40px,
+    11: 44px,
+    12: 48px,
+    13: 52px,
+    14: 56px,
+    15: 60px,
+    16: 64px,
+    17: 68px,
+    18: 72px,
+    19: 76px,
+    20: 80px,
+    21: 84px,
+    22: 88px,
+    23: 92px,
+    24: 96px,
+    xs: 4px,
+    sm: 8px,
+    md: 12px,
+    lg: 16px,
+    xl: 24px,
+    thin: 2px,
+    hair: 1px
+) !default;
+
+
+
+/// Border radius for all components.
+$border-radius: map-get( $spacing, 1 ) !default;
+$border-radius-sm: $border-radius - map-get( $spacing, thin ) !default;
+$border-radius-md: $border-radius !default;
+$border-radius-lg: $border-radius + map-get( $spacing, thin ) !default;
+
+
+
+// Generic styles
+/// @group typography
+/// Base font size across all components.
+// TODO: refactor once we extract drag drop as separate module
+$font-size: 14px !default;
+$font-family: inherit !default;
+$line-height: ( 20 / 14 ) !default;
+$font-size: 14px !default;
+$font-size-xs: 10px !default;
+$font-size-sm: 12px !default;
+$font-size-md: 14px !default;
+$font-size-lg: 16px !default;
+$font-size-xl: 20px !default;
+
+
+// Paragraph
+$paragraph-margin: 0 0 12px !default;

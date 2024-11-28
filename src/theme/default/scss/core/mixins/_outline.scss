@@ -1,0 +1,6 @@
+@mixin outline( $color: null ) {
+  border-color: $color;
+  color: $color;
+  background-color: transparent;
+  background-image: none;
+}

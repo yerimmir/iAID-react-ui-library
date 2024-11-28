@@ -1,0 +1,9 @@
+/* input 영역 */
+input[type='radio'] {
+    display: none;
+}
+
+/* svg 아이콘 효과주기 */
+svg:hover {
+    cursor: pointer;
+}

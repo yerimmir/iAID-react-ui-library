@@ -1,0 +1,24 @@
+.k-appbar {
+    @include box-shadow( $appbar-box-shadow );
+}
+.k-appbar-bottom {
+    @include box-shadow( $appbar-bottom-box-shadow );
+}
+
+
+// // AppBar theme colors
+// @each $name, $color in $theme-colors {
+//     .k-appbar-#{$name} {
+//         @if $name == "light" {
+//             // 추후 각 Theme 별 스타일 적용 코드 필요ㅗ
+//             // color: $appbar-light-text;
+//             // background-color: $appbar-light-bg;
+//         } @else if $name == "dark" {
+//             // color: $appbar-dark-text;
+//             // background-color: $appbar-dark-bg;
+//         } @else {
+//             // color: contrast-wcag( $color );
+//             // background-color: $color;
+//         }
+//     }
+// }

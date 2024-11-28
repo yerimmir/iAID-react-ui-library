@@ -1,0 +1,68 @@
+// Card
+$card-padding-x: map-get( $spacing, lg ) !default;
+$card-padding-y: map-get( $spacing, md ) !default;
+$card-border-width: 1px !default;
+$card-border-radius: $border-radius-lg !default;
+$card-inner-border-radius: calc( #{$card-border-radius} - #{$card-border-width} ) !default;
+$card-font-family: $font-family !default;
+$card-font-size: $font-size !default;
+$card-line-height: $line-height !default;
+
+$card-deck-gap: map-get( $spacing, lg ) !default;
+
+$card-bg: #fff !default;
+$card-text: #000 !default;
+$card-border: #000 !default;
+$card-shadow: null !default;
+
+$card-focus-bg: null !default;
+$card-focus-text: null !default;
+$card-focus-border: rgba( black, .15 ) !default;
+$card-focus-shadow: 0 3px 4px 0 rgba( black, .06 ) !default;
+
+$card-header-padding-x: $card-padding-x !default;
+$card-header-padding-y: $card-padding-y !default;
+$card-header-border-width: 1px !default;
+$card-header-bg: null !default;
+$card-header-text: #000 !default;
+$card-header-border: #000 !default;
+
+$card-body-padding-x: map-get( $spacing, lg ) !default;
+$card-body-padding-y: map-get( $spacing, lg ) !default;
+
+$card-footer-padding-x: $card-padding-x !default;
+$card-footer-padding-y: $card-padding-y !default;
+$card-footer-border-width: 1px !default;
+$card-footer-bg: null !default;
+$card-footer-text: rgb(48, 39, 39)!default;
+$card-footer-border: #000 !default;
+
+$card-title-margin-bottom: map-get( $spacing, sm ) !default;
+$card-title-font-size: 24px !default;
+$card-title-font-family: null !default;
+$card-title-line-height: 1.25 !default;
+$card-title-font-weight: 400 !default;
+$card-title-letter-spacing: null !default;
+
+$card-subtitle-margin-bottom: map-get( $spacing, sm ) !default;
+$card-subtitle-font-size: $font-size-sm !default;
+$card-subtitle-font-family: null !default;
+$card-subtitle-line-height: normal !default;
+$card-subtitle-font-weight: 400 !default;
+$card-subtitle-letter-spacing: null !default;
+$card-subtitle-text: #666666 !default;
+
+$card-img-max-width: 100px !default;
+$card-avatar-size: 45px !default;
+$card-avatar-spacing: $card-header-padding-x !default;
+
+$card-actions-padding-x: map-get( $spacing, 2 ) !default;
+$card-actions-padding-y: map-get( $spacing, 2 ) !default;
+$card-actions-border-width: 1px !default;
+$card-actions-gap: map-get( $spacing, 2 ) !default;
+
+$card-deck-scroll-button-radius: 0px !default;
+$card-deck-scroll-button-offset: -1px !default;
+
+$card-callout-width: 20px !default;
+$card-callout-height: 20px !default;

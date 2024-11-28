@@ -1,0 +1,10 @@
+.k-notification-group {
+    display: inline-flex;
+    position: fixed;
+    height: min-content;
+    max-height: 100%;
+    // flex-flow: column-reverse wrap;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    z-index: 1000;
+}

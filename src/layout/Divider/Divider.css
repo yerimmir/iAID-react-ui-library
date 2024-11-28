@@ -1,0 +1,11 @@
+/* 수평선 스타일링 */
+.k-divider.horizontal {
+    border-bottom : 1px solid black;
+    padding-left: 100px;
+}
+/* 수직선 스타일링 */
+.k-divider.vertical {
+    border-left: 1px solid black;
+    height: 100px;
+    padding-bottom: 100px;
+}

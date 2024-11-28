@@ -1,0 +1,15 @@
+// Appbar
+$appbar-margin-y: null !default;
+$appbar-margin-x: null !default;
+$appbar-border-width: 0px !default;
+
+$appbar-zindex: 1000 !default;
+
+$appbar-line-height: ( 20 / 14 ) !default;
+
+$appbar-box-shadow: 0px 1px 1px rgba(0, 0, 0, .16) !default;
+$appbar-bottom-box-shadow: 0px -1px 1px rgba(0, 0, 0, .16) !default;
+
+// Common - 추후 분리 해야됨
+$rgba-transparent: rgba( 0, 0, 0, 0 ); // stylelint-disable-line scss/dollar-variable-default
+$enable-shadows: true !default;

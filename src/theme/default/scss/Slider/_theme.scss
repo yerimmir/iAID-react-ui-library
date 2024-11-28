@@ -1,0 +1,31 @@
+.k-slider{
+    .k-slider-track,
+    .k-slider-selection {
+      @include border-radius($border-radius)
+    }
+
+    .k-slider-num {
+      @include fill($bg:$slider-track-bg, $border:$slider-track-bg);
+    }
+  
+    .k-slider-track{
+      @include fill($bg:$slider-track-bg)
+    }
+
+    .k-slider-track-wrap {
+      @include fill($bg:$slider-track-bg)
+    }
+  
+    .k-slider-selection{
+      @include fill($bg:$slider-selection-bg)
+    }
+  
+    .k-dragHandle{
+      @include fill($bg:$slider-selection-bg)
+    }
+
+    .k-marker{
+      @include fill($bg:$slider-marker-bg, $border:$slider-marker-bg);
+    }
+  
+  }

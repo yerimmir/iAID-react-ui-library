@@ -1,0 +1,394 @@
+.k-slider {
+    // width: min-content;
+    // height: min-content;
+    border: 0;
+    box-sizing: border-box;
+    outline: 0;
+    background: none;
+    display: inline-flex;
+    // align-items: center;
+    position: relative;
+
+    font-family: $slider-font-family;
+    font-size: $slider-font-size;
+    line-height: $slider-line-height;
+
+    .k-slider-track-wrap {
+        // display: flex;
+        flex: 1 1 auto;
+        flex-flow: inherit;
+        // position: relative;
+        // touch-action: none;
+        // width: min-content;
+        // margin: 0 auto;
+
+        .k-slider-num {
+            position: absolute;
+            display: inline-block;
+            padding: 0 2%;
+            font-size: 3px;
+
+            text-align: center;
+            border: 1% solid;
+        }
+
+        .k-slider-items {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            flex: 1 1 100%;
+            display: flex;
+            flex-flow: inherit;
+            justify-content: space-between;
+            user-select: none;
+        }
+
+        .k-tick {
+            flex: 0 0 1px;
+        }
+
+        .k-tick-horizontal {
+            width: 1px;
+        }
+
+        .k-tick-vertical {
+            width: 100%;
+            min-height: 1px;
+        }
+
+        .k-dragHandle {
+            position: absolute;
+            display: inline-block;
+            width: $slider-draghandle-size;
+            height: $slider-draghandle-size;
+            border-radius: 50%;
+        }
+    }
+
+    // Slider label
+    .k-label {
+        width: auto;
+        font-size: 0.92em;
+        line-height: 1;
+        white-space: nowrap;
+        position: absolute;
+    }
+
+    .k-tick,
+    .k-slider-track {
+        cursor: pointer;
+    }
+
+    .k-tick {
+        background-color: transparent;
+        background-position: center center;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        // position: relative;
+    }
+
+    .k-rtl &,
+    &.k-rtl,
+    [dir="rtl"] &,
+    &[dir="rtl"] {
+        .k-slider-selection {
+            left: auto;
+            right: 0;
+        }
+    }
+
+    // Slider wrap
+    .k-slider-wrap {
+        // width: 100%;
+        // height: 100%;
+        // display: flex;
+        flex-flow: inherit;
+        align-items: inherit;
+        gap: inherit;
+        position: relative;
+    }
+
+
+
+    // Slider horizontal
+    &-horizontal {
+        position: relative;
+        width: min-content;
+        flex-flow: row nowrap;
+
+
+        // Tick & labels
+        .k-tick {
+            background-position: center -92px;
+        }
+
+        .k-slider-topleft .k-tick {
+            background-position: center -122px;
+        }
+
+
+
+        .k-first .k-label {
+            left: 0;
+        }
+
+        .k-last .k-label {
+            left: 100%;
+        }
+
+        .k-slider-num {
+            position: absolute;
+            display: inline-block;
+            padding: 0 2%;
+            margin: 5px 0;
+            top: 40%;
+
+            text-align: center;
+            border: 1px solid;
+        }
+
+        .k-slider-num-min {
+            left: 0;
+        }
+
+        .k-slider-num-max {
+            right: 0;
+        }
+
+        .k-slider-button {
+            position: absolute;
+            display: inline-block;
+            top: 40%;
+        }
+
+        .k-slider-minus {
+            left: 0;
+        }
+
+        .k-slider-plus {
+            right: 0;
+        }
+
+        .k-slider-track-wrap {
+            position: absolute;
+            top: 40%;
+            left: 47%;
+            transform: translate(-50%);
+
+            width: 70%;
+            height: $slider-track-size;
+
+            .k-slider-selection {
+                position: absolute;
+                left: 0;
+                height: $slider-track-size;
+            }
+
+            .k-dragHandle {
+                top: -45%;
+            }
+
+            .k-dragHandle-left {
+                transform: translate(-50%);
+            }
+
+            .k-dragHandle-right {
+                transform: translate(50%);
+            }
+
+            .k-dragHandle:hover {
+                cursor: pointer;
+            }
+        }
+
+        .k-graduation {
+            position: absolute;
+        }
+
+        .k-top-graduation {
+            top: -$slider-track-size;
+
+            height: $slider-track-size;
+            border: 0.1px solid $slider-graduation-border;
+        }
+
+        .k-bottom-graduation {
+            top: $slider-track-size;
+            height: $slider-track-size;
+            border: 0.1px solid $slider-graduation-border;
+        }
+
+        // labels
+
+        .k-label {
+            left: 50%;
+            bottom: -2em;
+            transform: translateX(-50%);
+            color: $slider-label-color;
+        }
+
+
+
+        // marks
+        .k-marker {
+            display: inline-block;
+            position: absolute;
+            padding: 0 2%;
+
+            border: 1px solid;
+            border-radius: 5px;
+        }
+
+        .k-marker::after {
+            position: absolute;
+            border-top: 10px solid $slider-marker-bg;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 3px solid transparent;
+
+            transform: translate(-90%);
+            bottom: -50%;
+            content: "";
+        }
+
+        .k-marker-rtl::after {
+            transform: translate(90%);
+        }
+    }
+
+    // Slider vertical
+    &-vertical {
+        position: relative;
+        height: min-content;
+
+        .k-slider-num {
+            position: absolute;
+            display: inline-block;
+            padding: 0 10px;
+            margin: 5px 0;
+
+            text-align: center;
+            border: 1px solid;
+        }
+
+        .k-slider-num-min {
+            bottom: -5%;
+            left: 47%;
+        }
+
+        .k-slider-num-max {
+            top: -5%;
+            left: 47%;
+        }
+
+        .k-slider-button {
+            position: absolute;
+            display: inline-block;
+        }
+
+        .k-slider-minus {
+            bottom: 0;
+            left: 48.5%;
+        }
+
+        .k-slider-plus {
+            top: 0;
+            left: 48.5%;
+        }
+
+        .k-slider-track-wrap {
+            position: absolute;
+            bottom: 47%;
+            transform: translate(50%, 50%);
+            left: 50%;
+            width: $slider-track-size;
+            height: 70%;
+
+            .k-slider-selection {
+                position: absolute;
+                bottom: 0;
+                width: 7px;
+
+                border-radius: 2%;
+            }
+
+            .k-dragHandle {
+                left: -55%;
+                transform: translate(0, 50%);
+            }
+
+            .k-dragHandle:hover {
+                cursor: pointer;
+            }
+        }
+
+        .k-dragHandle {
+            background-color: transparent;
+            background-repeat: no-repeat;
+            border-style: none;
+            border-width: $slider-draghandle-border-width;
+            outline: 0;
+            position: absolute;
+            text-align: center;
+            text-decoration: none;
+
+            width: $slider-draghandle-size;
+            height: $slider-draghandle-size;
+
+            .k-slider-transitions.k-slider & {
+                transition: left $slider-transition-speed $slider-transition-function,
+                    background-color $slider-transition-speed $slider-transition-function,
+                    transform $slider-draghandle-transition-speed $slider-draghandle-transition-function;
+            }
+        }
+
+        .k-graduation {
+            position: absolute;
+        }
+
+        .k-top-graduation,
+        .k-left-graduation {
+            left: -$slider-track-size;
+
+            width: $slider-track-size;
+            border: 0.1px solid $slider-graduation-border;
+        }
+
+        .k-bottom-graduation,
+        .k-right-graduation {
+            left: $slider-track-size;
+
+            width: $slider-track-size;
+            border: 0.1px solid $slider-graduation-border;
+        }
+
+        // labels
+        .k-label {
+            right: -2.2em;
+            top: 100%;
+            transform: translateY(-50%);
+        }
+
+        // marks
+        .k-marker {
+            display: inline-block;
+            position: absolute;
+
+            padding: 0 10px;
+            border-radius: 5px;
+        }
+
+        .k-marker::after {
+            position: absolute;
+            border-top: 10px solid $slider-marker-bg;
+            border-left: 10px solid transparent;
+            border-right: 0px solid transparent;
+            border-bottom: 0px solid transparent;
+
+            transform: translate(90%);
+            bottom: -40%;
+            content: "";
+        }
+    }
+}
